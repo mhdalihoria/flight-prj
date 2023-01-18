@@ -27,7 +27,7 @@ export default function SearchSection() {
   
   const submitHandler = (e) => {
       e.preventDefault()
-      console.log(query);
+      // console.log(query);
       setSearch(query)
     
 }

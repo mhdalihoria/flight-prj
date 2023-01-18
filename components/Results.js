@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { ContextObj } from "@/Context";
 import { flightList } from "@/mockDB";
 import ResultItem from "./ResultItem";
 
 export default function Results() {
   const { search } = useContext(ContextObj);
+  const [favItems, setFavItems] = useState([]);
   let filteredItems = [];
 
   function convertFormat(unconvertedItem) {
@@ -19,6 +20,13 @@ export default function Results() {
     return convertedItem;
   }
 
+  const toggleItemToFav = (itemId) => {
+    console.log(itemId)
+    
+  }
+
+  console.log(favItems);
+
   if (search !== undefined) {
     filteredItems = flightList.filter(
       (item) =>
@@ -29,13 +37,15 @@ export default function Results() {
     );
   }
 
-  console.log(filteredItems)
+  // console.log(filteredItems);
 
   return (
     <div>
       {search !== undefined &&
         filteredItems.map((item, index) => {
-          return <ResultItem key={index} {...item} />;
+          return (
+            <ResultItem key={index} {...item} toggleItemToFav={toggleItemToFav} />
+          );
         })}
     </div>
   );
