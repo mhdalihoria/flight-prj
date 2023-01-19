@@ -6,6 +6,7 @@ export default function Favorites() {
   const [savedFavs, setSavedFavs] = useState(null);
   const [deleteFavs, setDeleteFavs] = useState(false);
   const { favItems, setFavItems } = useContext(ContextObj);
+  const [isFavorited, setIsFavorited] = useState(false)
 
   useEffect(() => {
     setSavedFavs(JSON.parse(localStorage.getItem("favs")));
@@ -22,18 +23,18 @@ export default function Favorites() {
     setFavItems([]);
   };
 
+  console.log(isFavorited)
+
   const favElements = favItems?.map((item, index) => {
     return <FavElement key={index} {...item} />;
   });
   return (
-    <div>
-      <br />
-      <br />
-      <button onClick={clickHandler}>Delete All</button>
-      <span>favs {favItems?.length}</span>
-      <span>{favElements}</span>
-      <br />
-      <br />
+    <div className="fav-container">
+      <div className="fav-container-header">
+        <span onClick={()=> setIsFavorited((prevFav) => !prevFav)}>Favorites ({favItems?.length})</span>
+        {favItems?.length > 0 && <button onClick={clickHandler}>Delete All</button>}
+      </div>
+      <div className={`${isFavorited ? "show-favs" : "hide-favs"}`}><div className="fav-container-body">{favElements}</div></div>
     </div>
   );
 }
