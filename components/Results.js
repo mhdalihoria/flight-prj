@@ -5,7 +5,6 @@ import ResultItem from "./ResultItem";
 
 export default function Results() {
   const { search } = useContext(ContextObj);
-  const [favItems, setFavItems] = useState([]);
   let filteredItems = [];
 
   function convertFormat(unconvertedItem) {
@@ -20,12 +19,6 @@ export default function Results() {
     return convertedItem;
   }
 
-  const toggleItemToFav = (itemId) => {
-    console.log(itemId)
-    
-  }
-
-  console.log(favItems);
 
   if (search !== undefined) {
     filteredItems = flightList.filter(
@@ -37,14 +30,14 @@ export default function Results() {
     );
   }
 
-  // console.log(filteredItems);
+  // import favItems from context, and run two for loops, to compare the items of favItems with those of filtered items, and change the status of isFavorite if they're matching
 
   return (
     <div>
       {search !== undefined &&
         filteredItems.map((item, index) => {
           return (
-            <ResultItem key={index} {...item} toggleItemToFav={toggleItemToFav} />
+            <ResultItem key={index} {...item} />
           );
         })}
     </div>
