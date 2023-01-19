@@ -4,13 +4,12 @@ import Favorites from "@/components/Favorites";
 import Results from "@/components/Results";
 import SearchSection from "@/components/SearchSection";
 
-
 export default function Home() {
   return (
     <>
-     <SearchSection />
-     <Favorites />
-     <Results />
+      <SearchSection />
+      <Favorites />
+       <Results /> 
     </>
-  )
+  );
 }

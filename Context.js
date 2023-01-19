@@ -25,6 +25,8 @@ const ContextProvider = (props) => {
     });
   }
 
+  console.log(favItems)
+
   useEffect(()=> {
     setFavItems(() => JSON.parse(localStorage.getItem("favs")) || [])
   }, [])
@@ -38,7 +40,7 @@ const ContextProvider = (props) => {
   // console.log(favItems);
 
   return (
-    <Context.Provider value={{ search, setSearch, addToFavs }}>
+    <Context.Provider value={{ search, setSearch, addToFavs, favItems, setFavItems }}>
       {props.children}
     </Context.Provider>
   );

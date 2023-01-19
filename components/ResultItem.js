@@ -12,7 +12,7 @@ export default function ResultItem(props) {
         <span>departDate {props.departDate}</span><br/>
         <span>returnDate {props.returnDate}</span><br/>
         <span>travelClass {props.travelClass}</span><br/>
-        <span onClick ={() => addToFavs(props.id)}>{props.isFavorite ? "remove from favs" : "add to favs"}</span><br/> <hr />
+        <span onClick ={() => addToFavs(props.id)}>{!props.isFavorite && "add to favs"}</span><br/> <hr />
     </div>
   )
 }

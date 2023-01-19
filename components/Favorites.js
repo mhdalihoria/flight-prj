@@ -1,23 +1,37 @@
-// import { ContextObj } from "@/Context";
 import { useEffect, useContext, useState } from "react";
-import FavElements from "./FavElements";
+import FavElement from "./FavElement";
+import { ContextObj } from "@/Context";
 
 export default function Favorites() {
-    const [savedFavs, setSavedFavs] = useState(null)
-    
-    useEffect(() => {
-        setSavedFavs(JSON.parse(localStorage.getItem('favs')))
-    }, [])
+  const [savedFavs, setSavedFavs] = useState(null);
+  const [deleteFavs, setDeleteFavs] = useState(false);
+  const { favItems, setFavItems } = useContext(ContextObj);
+
+  useEffect(() => {
+    setSavedFavs(JSON.parse(localStorage.getItem("favs")));
+  }, [favItems]);
   
-    console.log(savedFavs)
-    const favElements = savedFavs?.map((item, index) => {
-        return <FavElements key={index} {...item}/>
-    })
-    return (
+  useEffect(() => {
+    if (deleteFavs) {
+      localStorage.removeItem("favs");
+    }
+  }, [deleteFavs]);
+
+  const clickHandler = () => {
+    setDeleteFavs(true);
+    setFavItems([]);
+  };
+
+  console.log(savedFavs);
+  const favElements = favItems?.map((item, index) => {
+    return <FavElement key={index} {...item} />;
+  });
+  return (
     <div>
       <br />
       <br />
-      <span>favs {savedFavs?.length}</span>
+      <button onClick={clickHandler}>Delete All</button>
+      <span>favs {favItems?.length}</span>
       <span>{favElements}</span>
       <br />
       <br />

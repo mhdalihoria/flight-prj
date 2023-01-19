@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function FavElements(props) {
+export default function FavElement(props) {
   return (
     <div>
         <span>price {props.price}$</span> <br/>
