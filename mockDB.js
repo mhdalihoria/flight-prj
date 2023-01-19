@@ -11,7 +11,7 @@ export const flightList = [
         destinationPlace: "Romania", 
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
-        travelClass: "Economy Class",
+        travelClass: "Economy",
         isFavorite: false
     }, 
     {
@@ -22,7 +22,7 @@ export const flightList = [
         destinationPlace: "Germany", 
         departDate: "03-Feb-2023",
         returnDate: "10-Feb-2023", 
-        travelClass: "Business Class",
+        travelClass: "Business",
         isFavorite: false
     }, 
     {
@@ -33,7 +33,7 @@ export const flightList = [
         destinationPlace: "USA", 
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
-        travelClass: "First Class",
+        travelClass: "First",
         isFavorite: false
     }, 
     {
@@ -44,7 +44,7 @@ export const flightList = [
         destinationPlace: "Germany", 
         departDate: "03-Feb-2023",
         returnDate: "10-Feb-2023", 
-        travelClass: "Business Class",
+        travelClass: "Business",
         isFavorite: false
     }, 
     {
@@ -55,7 +55,7 @@ export const flightList = [
         destinationPlace: "Romania", 
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
-        travelClass: "Business Class",
+        travelClass: "Business",
         isFavorite: false
     }, 
     {
@@ -66,7 +66,7 @@ export const flightList = [
         destinationPlace: "Iraq", 
         departDate: "10-Feb-2023",
         returnDate: "21-Feb-2023", 
-        travelClass: "Economy Class",
+        travelClass: "Economy",
         isFavorite: false
     }, 
 

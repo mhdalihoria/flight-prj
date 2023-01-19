@@ -33,7 +33,7 @@ export default function Results() {
   // import favItems from context, and run two for loops, to compare the items of favItems with those of filtered items, and change the status of isFavorite if they're matching
 
   return (
-    <div>
+    <div className="results-container">
       {search !== undefined &&
         filteredItems.map((item, index) => {
           return (

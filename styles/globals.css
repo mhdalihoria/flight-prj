@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro-banner {
+    background-image: url('https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    object-fit: cover;   
+    height: 300px;
+    filter: brightness(20%);
+ 
+}
+
+/* Form styling start */
+.form-container {
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.21);
+    padding: 1rem;
+    transform: translateY(-50%);
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.form-item {
+    margin-right: 1rem;
+    max-width: 200px;
+    margin-top: .5rem;
+
+}
+.form-item label {
+    display: block;
+    font-size: .8rem;
+}
+
+.form-item input {
+    width: 100%;
+    border-radius: 5px;    
+    padding: 5px 5px;
+    border: 1px solid rgb(148, 148, 148);
+}
+
+.form-button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 5px 25px;
+    border-radius: 5px;
+    background: #2a5ab4;
+    border: none;
+    color: white;
+}
+/* Form styling end */
+
+/* results styling start*/
+  .results-container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transform: translateY(-50px);
+  }  
+
+  .result-item-container {
+    max-width: 200px;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.21);
+    overflow-x: scroll;
+    margin: 1rem;
+    padding: 1.6rem 1rem;
+  }
+
+  .result-item-container h1 {
+    color: #2a5ab4;
+    font-size: 1.5rem;
+  }
+
+  .result-item-container h4 {
+    padding-bottom: .5em;
+    font-size: .8rem;
+    font-weight: 400;
+  }
+
+  .result-item-container h4 > span {
+    font-weight: 700;
+  }
+
+  .result-item-container-primary {
+    color: #A31A1A;
+  }
+  .result-item-container-secondary {
+    color: #027754;
+  }
+  .result-item-container-thirdly {
+    color: #ac8a02;
+  }
+
+  .result-item-container-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 5px 25px;
+    border-radius: 5px;
+    background: #2a5ab4;
+    border: none;
+    color: white;
+  }
+
+/* results styling end*/
+
+
+/* Media Queries */
+@media (min-width: 500px) {
+    .form-container form {
+        justify-content: space-around;
+    }
+    .form-container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 600px) {
+    .form-container {
+        width: 90%;
+    }
+    .form-item label {
+        font-size: .9rem ;
+    }
+    .form-button {
+        font-size: .9rem;
+    }
+
+    .results-container  {
+        transform: translateY(0px);
+      }  
+}
+@media (min-width: 1100px) {
+    .form-button  {
+        max-width: 200px ;
+    }
+}

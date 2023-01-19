@@ -29,48 +29,50 @@ export default function SearchSection() {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <div>
-        <label htmlFor="from">From</label>
-        <input
-          id="from"
-          type="text"
-          placeholder="From"
-          value={query.from}
-          onChange={changeHandler}
-          required
-        ></input>
-      </div>
-      <div>
-        <label htmlFor="to">To</label>
-        <input
-          id="to"
-          type="text"
-          placeholder="Destination"
-          value={query.to}
-          onChange={changeHandler}
-          required
-        ></input>
-      </div>
-      <div>
-        <label htmlFor="departDate">Depart</label>
-        <ReactDatePicker
-          selected={query.departDate}
-          onChange={(date) =>
-            setQuery((prevQuery) => ({ ...prevQuery, departDate: date }))
-          }
-        />
-      </div>
-      <div>
-        <label htmlFor="returnDate">Return</label>
-        <ReactDatePicker
-          selected={query.returnDate}
-          onChange={(date) =>
-            setQuery((prevQuery) => ({ ...prevQuery, returnDate: date }))
-          }
-        />
-      </div>
-      <button>Search</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={submitHandler}>
+        <div className="form-item">
+          <label htmlFor="from">From</label>
+          <input
+            id="from"
+            type="text"
+            placeholder="From"
+            value={query.from}
+            onChange={changeHandler}
+            required
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="to">To</label>
+          <input
+            id="to"
+            type="text"
+            placeholder="Destination"
+            value={query.to}
+            onChange={changeHandler}
+            required
+          ></input>
+        </div>
+        <div className="form-item">
+          <label htmlFor="departDate">Depart</label>
+          <ReactDatePicker
+            selected={query.departDate}
+            onChange={(date) =>
+              setQuery((prevQuery) => ({ ...prevQuery, departDate: date }))
+            }
+          />
+        </div>
+        <div className="form-item">
+          <label htmlFor="returnDate">Return</label>
+          <ReactDatePicker
+            selected={query.returnDate}
+            onChange={(date) =>
+              setQuery((prevQuery) => ({ ...prevQuery, returnDate: date }))
+            }
+          />
+        </div>
+        <button className="form-button">Search</button>
+      </form>
+    </div>
   );
 }
