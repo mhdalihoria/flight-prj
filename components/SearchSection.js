@@ -3,7 +3,6 @@ import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ContextObj } from "@/Context";
 
-
 export default function SearchSection() {
   const [query, setQuery] = useState({
     from: "",
@@ -12,7 +11,7 @@ export default function SearchSection() {
     returnDate: new Date(),
   });
 
-  const {setSearch} = useContext(ContextObj)
+  const { setSearch } = useContext(ContextObj);
 
   const changeHandler = (e) => {
     const { value, id } = e.target;
@@ -24,14 +23,10 @@ export default function SearchSection() {
     });
   };
 
-  
   const submitHandler = (e) => {
-      e.preventDefault()
-      // console.log(query);
-      setSearch(query)
-    
-}
-
+    e.preventDefault();
+    setSearch(query);
+  };
 
   return (
     <form onSubmit={submitHandler}>
@@ -75,7 +70,7 @@ export default function SearchSection() {
           }
         />
       </div>
-        <button>Search</button>
+      <button>Search</button>
     </form>
   );
 }

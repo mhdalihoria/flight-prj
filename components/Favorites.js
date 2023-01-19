@@ -10,7 +10,7 @@ export default function Favorites() {
   useEffect(() => {
     setSavedFavs(JSON.parse(localStorage.getItem("favs")));
   }, [favItems]);
-  
+
   useEffect(() => {
     if (deleteFavs) {
       localStorage.removeItem("favs");
@@ -22,7 +22,6 @@ export default function Favorites() {
     setFavItems([]);
   };
 
-  console.log(savedFavs);
   const favElements = favItems?.map((item, index) => {
     return <FavElement key={index} {...item} />;
   });

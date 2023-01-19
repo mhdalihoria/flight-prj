@@ -19,28 +19,26 @@ const ContextProvider = (props) => {
         if (favItems.some((item) => filteredFlight[0] === item)) {
           return prevFavs;
         } else {
-            return [...prevFavs, ...filteredFlight]
+          return [...prevFavs, ...filteredFlight];
         }
       }
     });
   }
 
-  console.log(favItems)
+  useEffect(() => {
+    setFavItems(() => JSON.parse(localStorage.getItem("favs")) || []);
+  }, []);
 
-  useEffect(()=> {
-    setFavItems(() => JSON.parse(localStorage.getItem("favs")) || [])
-  }, [])
-
-  useEffect(()=> {
-    if(favItems !== null) {
-      localStorage.setItem("favs", JSON.stringify(favItems))
+  useEffect(() => {
+    if (favItems !== null) {
+      localStorage.setItem("favs", JSON.stringify(favItems));
     }
-  },[favItems])
-
-  // console.log(favItems);
+  }, [favItems]);
 
   return (
-    <Context.Provider value={{ search, setSearch, addToFavs, favItems, setFavItems }}>
+    <Context.Provider
+      value={{ search, setSearch, addToFavs, favItems, setFavItems }}
+    >
       {props.children}
     </Context.Provider>
   );
