@@ -23,7 +23,6 @@ export default function Favorites() {
     setFavItems([]);
   };
 
-  console.log(isFavorited)
 
   const favElements = favItems?.map((item, index) => {
     return <FavElement key={index} {...item} />;

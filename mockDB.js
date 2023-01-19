@@ -12,7 +12,8 @@ export const flightList = [
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
         travelClass: "Economy",
-        isFavorite: false
+        isFavorite: false, 
+        flightDuration: 180
     }, 
     {
         id: 2, 
@@ -23,7 +24,8 @@ export const flightList = [
         departDate: "03-Feb-2023",
         returnDate: "10-Feb-2023", 
         travelClass: "Business",
-        isFavorite: false
+        isFavorite: false, 
+        flightDuration: 210
     }, 
     {
         id: 3, 
@@ -34,7 +36,8 @@ export const flightList = [
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
         travelClass: "First",
-        isFavorite: false
+        isFavorite: false, 
+        flightDuration: 480
     }, 
     {
         id: 4, 
@@ -45,7 +48,8 @@ export const flightList = [
         departDate: "03-Feb-2023",
         returnDate: "10-Feb-2023", 
         travelClass: "Business",
-        isFavorite: false
+        isFavorite: false,
+        flightDuration: 270
     }, 
     {
         id: 5, 
@@ -56,7 +60,8 @@ export const flightList = [
         departDate: "01-Feb-2023",
         returnDate: "16-Feb-2023", 
         travelClass: "Business",
-        isFavorite: false
+        isFavorite: false, 
+        flightDuration: 140
     }, 
     {
         id: 6, 
@@ -67,7 +72,8 @@ export const flightList = [
         departDate: "10-Feb-2023",
         returnDate: "21-Feb-2023", 
         travelClass: "Economy",
-        isFavorite: false
+        isFavorite: false, 
+        flightDuration: 60
     }, 
 
 ]

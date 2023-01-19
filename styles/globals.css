@@ -99,27 +99,26 @@ body {
   cursor: pointer;
 }
 
-
-
 .fav-container-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem 0;
 }
 
 .fav-element-container {
-    max-width: 200px;
-    margin: 2rem auto;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.21);
-    padding: 1rem;
+  max-width: 200px;
+  margin: 2rem auto;
+  border: 2px solid #2a5ab4;
+  border-radius: 15px;
+  padding: 1rem;
 }
 .show-favs {
-    display: block;
+  display: block;
 }
 
-.hide-favs{ 
-    display: none;
+.hide-favs {
+  display: none;
 }
 
 /* fav container end  */
@@ -129,30 +128,37 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* transform: translateY(-50px); */
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.21);
+  max-width: 92%;
+  padding: 2rem 0;
+  margin: auto;
   margin-bottom: 100px;
 }
 
 .result-item-container {
   min-width: 200px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.21);
+  border: 2px solid #2a5ab4;
+  border-radius: 15px;
   overflow-x: scroll;
   margin: 1rem;
   padding: 1.6rem 1rem;
 }
 
-.result-item-container h1, .fav-element-container h1 {
+.result-item-container h1,
+.fav-element-container h1 {
   color: #2a5ab4;
   font-size: 1.5rem;
 }
 
-.result-item-container h4, .fav-element-container h4 {
+.result-item-container h4,
+.fav-element-container h4 {
   padding-bottom: 0.5em;
   font-size: 0.8rem;
   font-weight: 400;
 }
 
-.result-item-container h4 > span, .fav-element-container h4 > span{
+.result-item-container h4 > span,
+.fav-element-container h4 > span {
   font-weight: 700;
 }
 
@@ -243,14 +249,15 @@ footer div ul li:hover {
     transform: translateY(0px);
   }
 
-  .result-item-container h1, .fav-element-container h1 {
+  .result-item-container h1,
+  .fav-element-container h1 {
     font-size: 2rem;
   }
-  
-  .result-item-container h4, .fav-element-container h4 {
+
+  .result-item-container h4,
+  .fav-element-container h4 {
     font-size: 1rem;
   }
-
 
   footer {
     padding: 2rem 6rem;
