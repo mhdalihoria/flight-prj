@@ -48,11 +48,9 @@ export default function Results() {
           return p1.price < p2.price ? start : p1.price > p2.price ? end : 0;
         });
       });
-      setPriceFilter(null)
-
+      setPriceFilter(null);
     }
     if (priceFilter === null && durationFilter !== null) {
-
       setFilteredItems(() => {
         return filteredItems?.sort((p1, p2) => {
           const start = durationFilter === "shortest" ? -1 : 1;
@@ -63,59 +61,38 @@ export default function Results() {
             ? end
             : 0;
         });
-      })
-      setDurationFilter(null)
+      });
+      setDurationFilter(null);
     }
   }, [priceFilter, durationFilter, filteredItems]);
 
   console.log(priceFilter);
-
-  // useEffect(() => {
-  // function displayElements() {
-  //   if (priceFilter === null && durationFilter === null) {
-  //     return setFilteredItems(filteredItems.map((item, index) => {
-  //       return <ResultItem key={index} {...item} />;
-  //     }))
-  //   }
-  //   if (priceFilter !== null && durationFilter === null) {
-  //     return setFilteredItems(sortedByPrice.map((item, index) => {
-  //       return <ResultItem key={index} {...item} />;
-  //     }))
-  //   }
-  //   if (priceFilter === null && durationFilter !== null) {
-  //     return setFilteredItems(sortedByDuration.map((item, index) => {
-  //       return <ResultItem key={index} {...item} />;
-  //     }))
-  //   }
-  // }
-
-  // displayElements()
-  // }, [durationFilter, priceFilter, filteredItems])
-
-  //   // if (priceFilter !== null && durationFilter !== null) {
-  //   //   return sortedByBoth;
-  //   // }
-  // }
 
   const filteredElements = filteredItems?.map((item, index) => {
     return <ResultItem key={index} {...item} />;
   });
 
   return (
-    <div className="results-container">
-      <div className="results-filter">
-        <select onChange={(e) => setDurationFilter(e.target.value)}>
-          <option value={null}>--duration--</option>
-          <option value={"shortest"}>shortest</option>
-          <option value={"longest"}>longest</option>
-        </select>
-        <select onChange={(e) => setPriceFilter(e.target.value)}>
-          <option value={null}>--price--</option>
-          <option value={"cheapest"}>Cheapest</option>
-          <option value={"expensive"}>Most expensive</option>
-        </select>
-      </div>
-      {search !== undefined && filteredElements}
-    </div>
+    <>
+      {search !== undefined && (
+        <div>
+          <div className="results-filter">
+            <select onChange={(e) => setDurationFilter(e.target.value)}>
+              <option value={null} hidden selected>--duration--</option>
+              <option value={"shortest"}>shortest</option>
+              <option value={"longest"}>longest</option>
+            </select>
+            <select onChange={(e) => setPriceFilter(e.target.value)}>
+              <option value={null} hidden selected>--price--</option>
+              <option value={"cheapest"}>Cheapest</option>
+              <option value={"expensive"}>Most expensive</option>
+            </select>
+        </div>
+            <div className="results-container">
+          {filteredElements}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
