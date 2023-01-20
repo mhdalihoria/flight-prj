@@ -12,6 +12,7 @@ export default function ResultItem(props) {
         <h4><span className='result-item-container-primary'>Departing on:</span> {props.departDate}</h4>
         <h4><span className='result-item-container-secondary'>Returning on:</span> {props.returnDate}</h4>
         <h4><span >Class:</span> {props.travelClass}</h4>
+        <h4><span >Duration:</span> ~{Math.floor(props.flightDuration/60)} hours.</h4>
         <button className= "result-item-container-btn" onClick ={() => addToFavs(props.id)}>{!props.isFavorite && "Add to Favorites"}</button> 
     </div>
   )
