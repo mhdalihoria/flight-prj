@@ -9,10 +9,10 @@ Life Preview: [here](https://mhdali-flight-test.netlify.app/)
 **Test Cases:**
 There would be results for the following: 
 (Format: from // to // departing date// returning date)
-1- 2 Results @ `Damascus // Romania // 1/Feb/2023 // 16/Feb/2023  `
-2- 2 Results @ `Damascus // Germany // 3/Feb/2023 // 10/Feb/2023`
-3- 1 Result @ `Beirut // USA // 1/Feb/2023 // 16/Feb/2023`
-4- 1 Result @ `Beirut // Iraq // 10/Feb/2023 // 21/Feb/2023`
+- 2 Results @ `Damascus // Romania // 1/Feb/2023 // 16/Feb/2023  `
+- 2 Results @ `Damascus // Germany // 3/Feb/2023 // 10/Feb/2023`
+- 1 Result @ `Beirut // USA // 1/Feb/2023 // 16/Feb/2023`
+- 1 Result @ `Beirut // Iraq // 10/Feb/2023 // 21/Feb/2023`
 
 
 
