@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flight test website
 
-## Getting Started
+This is a project that mimics a website for selling flying tickets, or Trivago but for flights ;)
+Life Preview: [here](https://mhdali-flight-test.netlify.app/)
 
-First, run the development server:
+# How to use: 
+- By opening the website (if you were doing so offline, run `npm run dev` in your terminal), you get to see the website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**Test Cases:**
+There would be results for the following: 
+(Format: from // to // departing date// returning date)
+1- 2 Results @ `Damascus // Romania // 1/Feb/2023 // 16/Feb/2023  `
+2- 2 Results @ `Damascus // Germany // 3/Feb/2023 // 10/Feb/2023`
+3- 1 Result @ `Beirut // USA // 1/Feb/2023 // 16/Feb/2023`
+4- 1 Result @ `Beirut // Iraq // 10/Feb/2023 // 21/Feb/2023`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+ 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Information about this website:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- This project was created using `NextJs`, but only for front end. 
+- For storage `localStorage` was used.
+- It is mobile responsive, though the design could obviously be better/improved. But the core functions have been satisfied. 
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
