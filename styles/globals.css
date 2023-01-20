@@ -258,6 +258,20 @@ footer div ul li:hover {
 }
 /* footer styling end */
 
+/* Error styling start */
+.error-container {
+  text-align: center;
+}
+
+.error-container h1 {
+  color: #2a5ab4;
+  margin-bottom: .5em;
+}
+.error-container h3 {
+  font-weight: 400;
+}
+/* Error styling end */
+
 /* Media Queries */
 @media (min-width: 500px) {
   .form-container form {

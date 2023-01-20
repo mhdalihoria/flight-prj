@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { ContextObj } from "@/Context";
 import { flightList } from "@/mockDB";
 import ResultItem from "./ResultItem";
+import Error from "./Error";
 
 export default function Results() {
   const { search } = useContext(ContextObj);
@@ -66,30 +67,37 @@ export default function Results() {
     }
   }, [priceFilter, durationFilter, filteredItems]);
 
-  console.log(priceFilter);
-
   const filteredElements = filteredItems?.map((item, index) => {
     return <ResultItem key={index} {...item} />;
   });
+
+  console.log(filteredElements);
 
   return (
     <>
       {search !== undefined && (
         <div>
-          <div className="results-filter">
-            <select onChange={(e) => setDurationFilter(e.target.value)}>
-              <option value={null} hidden selected>--duration--</option>
-              <option value={"shortest"}>shortest</option>
-              <option value={"longest"}>longest</option>
-            </select>
-            <select onChange={(e) => setPriceFilter(e.target.value)}>
-              <option value={null} hidden selected>--price--</option>
-              <option value={"cheapest"}>Cheapest</option>
-              <option value={"expensive"}>Most expensive</option>
-            </select>
-        </div>
-            <div className="results-container">
-          {filteredElements}
+          {filteredElements?.length !== 0 && (
+            <div className="results-filter">
+              <select onChange={(e) => setDurationFilter(e.target.value)}>
+                <option value={null} hidden selected>
+                  --duration--
+                </option>
+                <option value={"shortest"}>shortest</option>
+                <option value={"longest"}>longest</option>
+              </select>
+              <select onChange={(e) => setPriceFilter(e.target.value)}>
+                <option value={null} hidden selected>
+                  --price--
+                </option>
+                <option value={"cheapest"}>Cheapest</option>
+                <option value={"expensive"}>Most expensive</option>
+              </select>
+            </div>
+          )}
+          <div className="results-container">
+            {filteredElements?.length === 0 && <Error />}
+            {filteredElements?.length !== 0 && filteredElements}
           </div>
         </div>
       )}
